@@ -1,23 +1,25 @@
+tasks = ["Wash clothes", "Code", "Write one chapter", "Read novel", "Cook lunch", "Go for a walk"]
+
 while True:
- print("1. Add tasks")
- print("2. View tasks")
- print("3. Exit")
+    print("1. Add tasks")
+    print("2. View tasks")
+    print("3. Exit")
 
- tasks=["Wash clothes","Code","Write one chapter","Read novel","Cook lunch","Go for a walk"]
- for task in tasks:
-    print(task)
+    choice = input("Choose an option: ")
 
- choice= input("Choose an option: ")
+    if choice == "1":
+        task = input("Enter a new task: ")
+        tasks.append(task)
+        print("Task added!")
 
- if choice =="1":
-     task=input("Enter a new task:")
-     tasks.append(task)
-     print("task added!")
+    elif choice == "2":
+        print("Your tasks:")
+        for task in tasks:
+            print(task)
 
-     if choice=="2":
-       task=input("View all the task:")
-       print("menu")
+    elif choice == "3":
+        print("Exit")
+        break
 
-       if choice=="3":
-         print("Exit")
-         
+    else:
+        print("Invalid option")
