@@ -22,4 +22,4 @@ while True:
         break
 
     else:
-        print("Invalid option")
+        print("Not an solid option")
